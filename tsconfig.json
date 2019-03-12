@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "k4ycer-lexer": [
+        "dist/k4ycer-lexer"
+      ],
+      "k4ycer-lexer/*": [
+        "dist/k4ycer-lexer/*"
+      ],
+      "k4ycer-syntactic-analyzer": [
+        "dist/k4ycer-syntactic-analyzer"
+      ],
+      "k4ycer-syntactic-analyzer/*": [
+        "dist/k4ycer-syntactic-analyzer/*"
+      ]
+    }
   }
 }

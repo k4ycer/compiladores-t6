@@ -129,6 +129,76 @@
           }
         }
       }
+    },
+    "k4ycer-lexer": {
+      "root": "projects/k4ycer-lexer",
+      "sourceRoot": "projects/k4ycer-lexer/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/k4ycer-lexer/tsconfig.lib.json",
+            "project": "projects/k4ycer-lexer/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/k4ycer-lexer/src/test.ts",
+            "tsConfig": "projects/k4ycer-lexer/tsconfig.spec.json",
+            "karmaConfig": "projects/k4ycer-lexer/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/k4ycer-lexer/tsconfig.lib.json",
+              "projects/k4ycer-lexer/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "k4ycer-syntactic-analyzer": {
+      "root": "projects/k4ycer-syntactic-analyzer",
+      "sourceRoot": "projects/k4ycer-syntactic-analyzer/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/k4ycer-syntactic-analyzer/tsconfig.lib.json",
+            "project": "projects/k4ycer-syntactic-analyzer/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/k4ycer-syntactic-analyzer/src/test.ts",
+            "tsConfig": "projects/k4ycer-syntactic-analyzer/tsconfig.spec.json",
+            "karmaConfig": "projects/k4ycer-syntactic-analyzer/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/k4ycer-syntactic-analyzer/tsconfig.lib.json",
+              "projects/k4ycer-syntactic-analyzer/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "T6AnalizadorDescendente"
