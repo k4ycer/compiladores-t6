@@ -53,10 +53,8 @@ export abstract class Lexer{
         let { Accepted, AnalyzedString, AcceptingState } = this.fsm.Run(input);
         let token: Token;
 
-        if(!Accepted){
-            if(AnalyzedString.length == 0){
-                throw new Error("Error: Invalid character " + this.input.charAt(this.position) + " on line " + this.line + ", column " + this.column);
-            }  
+        if(!Accepted){            
+            throw new Error("Error: Invalid character " + this.input.charAt(this.position) + " on line " + this.line + ", column " + this.column);
         }else{ 
             // Reconocer token dependiendo del lexer especifico
             let token: Token = this.recognizeToken(Accepted, AnalyzedString, AcceptingState);
